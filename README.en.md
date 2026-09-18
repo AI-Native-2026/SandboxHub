@@ -14,21 +14,6 @@ Install and run the OpenCode coding agent inside a sandbox terminal with one cli
 
 > The sandbox detail page has seven tabs: **Overview / Runtime / Data / Network / Observability / Snapshots / Security**. The screenshot shows the embedded web terminal on the **Runtime** tab with the OpenCode coding agent installed and running inside the sandbox.
 
----
-
-## Live Demo
-
-- Entry point: **http://43.135.120.107:8081** (single HTTP port; nginx proxies the SPA plus `/api` and `/realms`)
-- Test accounts (password `Passw0rd!` for all):
-
-| Account | Role | Description |
-|---|---|---|
-| `admin` | platform-admin | Platform admin; sees governance & admin menus |
-| `tenantadmin` | tenant-admin | Manages tenant members and quotas |
-| `dev1` | developer | Self-service sandbox create/operate |
-| `viewer` | viewer | Read-only; no write entry points |
-
-> The top bar offers single-button toggles for **theme (dark/light)** and **language (中 / EN)**. Multi-tenancy is switched via the **tenant** dropdown.
 
 ---
 
