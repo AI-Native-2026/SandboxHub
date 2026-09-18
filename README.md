@@ -1,6 +1,6 @@
 # SandboxHub
 
-**AI智能体沙箱平台**（基于 [OpenSandbox](https://github.com/alibaba/OpenSandbox)，零改动上游核心）。面向 **开发者自助** 与 **运维 / 租户治理** 的一站式 PaaS：一个入口完成沙箱创建、命令执行、文件管理、Agent 托管、配额审批、审计与观测。
+**AI智能体沙箱平台**（基于 [OpenSandbox](https://github.com/alibaba/OpenSandbox)）。面向 **开发者自助** 与 **运维 / 租户治理** 的一站式 PaaS：一个入口完成沙箱创建、命令执行、文件管理、Agent 托管、配额审批、审计与观测。
 
 **简体中文** · [English](README.en.md)
 
