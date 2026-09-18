@@ -1,6 +1,6 @@
 # SandboxHub
 
-**An AI agent sandbox platform** built on [OpenSandbox](https://github.com/alibaba/OpenSandbox) with **zero changes to the upstream core**. A single PaaS for **developer self-service** and **ops / tenant governance**: create sandboxes, run commands, manage files, host agents, govern quotas, audit and observe — all from one entry point.
+**An AI agent sandbox platform** built on [OpenSandbox](https://github.com/alibaba/OpenSandbox) . A single PaaS for **developer self-service** and **ops / tenant governance**: create sandboxes, run commands, manage files, host agents, govern quotas, audit and observe — all from one entry point.
 
 [简体中文](README.md) · **English**
 
