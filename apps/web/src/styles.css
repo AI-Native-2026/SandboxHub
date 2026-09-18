@@ -1,0 +1,249 @@
+:root {
+  --text: #e8ecf4;
+  --text-dim: #9aa6bd;
+  --text-faint: #7b88a3;
+  --surface: rgba(255, 255, 255, 0.045);
+  --surface-2: rgba(255, 255, 255, 0.03);
+  --surface-solid: #141b29;
+  --surface-solid-2: #101724;
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --accent: #6ea8fe;
+  --accent-soft: rgba(110, 168, 254, 0.12);
+  --accent-border: rgba(110, 168, 254, 0.35);
+  --ok: #4ade80;
+  --warn: #fbbf24;
+  --bad: #f87171;
+  --stat-a: #6ea8fe;
+  --stat-b: #5fd3b0;
+  --code-bg: #0d1117;
+  --code-fg: #5fd3b0;
+  --code-border: #1e2733;
+  --shadow: 0 18px 44px -30px rgba(0, 0, 0, 0.9);
+  --shadow-soft: 0 12px 32px -26px rgba(0, 0, 0, 0.75);
+}
+html[data-theme="light"] {
+  --text: #1a2233;
+  --text-dim: #4b5875;
+  --text-faint: #6b7794;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-2: rgba(255, 255, 255, 0.5);
+  --surface-solid: #ffffff;
+  --surface-solid-2: #f4f7fc;
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.18);
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+  --accent-border: rgba(37, 99, 235, 0.28);
+  --ok: #16a34a;
+  --warn: #b45309;
+  --bad: #dc2626;
+  --stat-a: #2563eb;
+  --stat-b: #0d9488;
+  --code-bg: #f6f8fa;
+  --code-fg: #0f766e;
+  --code-border: #d8e0ec;
+  --shadow: 0 14px 34px -28px rgba(15, 23, 42, 0.5);
+  --shadow-soft: 0 10px 26px -24px rgba(15, 23, 42, 0.4);
+}
+
+body {
+  margin: 0;
+  background: #0b0f17;
+  color: var(--text);
+  background-image:
+    radial-gradient(1100px 560px at 82% -8%, rgba(110, 168, 254, 0.1), transparent 62%),
+    radial-gradient(900px 500px at -10% 0%, rgba(192, 164, 255, 0.07), transparent 60%);
+  background-attachment: fixed;
+}
+html[data-theme="light"] body {
+  background: #f4f7fc;
+  background-image:
+    radial-gradient(1100px 560px at 82% -8%, rgba(37, 99, 235, 0.06), transparent 62%),
+    radial-gradient(900px 500px at -10% 0%, rgba(124, 58, 237, 0.05), transparent 60%);
+}
+html[data-theme="light"] .ant-layout,
+html[data-theme="light"] .ant-layout-content {
+  background: transparent !important;
+}
+html[data-theme="light"] .ant-layout-sider {
+  background: #ffffff !important;
+  border-right: 1px solid rgba(15, 23, 42, 0.08);
+}
+html[data-theme="light"] .sh-logo {
+  color: #17203a;
+  border-bottom-color: rgba(15, 23, 42, 0.08);
+}
+
+/* ---------- shell ---------- */
+.sh-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 20px 20px 18px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+.sh-logo .dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #6ea8fe, #c0a4ff);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 10px 26px -12px rgba(110, 168, 254, 0.8);
+}
+.ant-layout-sider {
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+.ant-layout-header {
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.sh-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding-inline: 24px;
+  background: var(--surface-solid-2, rgba(13, 19, 32, 0.86)) !important;
+  height: 60px;
+  line-height: 60px;
+}
+html[data-theme="light"] .sh-topbar {
+  background: rgba(255, 255, 255, 0.86) !important;
+}
+.sh-cmdk {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-dim, #9aa6bd);
+  border-radius: 10px;
+  padding: 5px 12px;
+  font-size: 12.5px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.sh-cmdk:hover {
+  border-color: rgba(110, 168, 254, 0.5);
+  color: var(--text, #e8ecf4);
+}
+html[data-theme="light"] .sh-cmdk {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.14);
+}
+
+/* ---------- page head ---------- */
+.sh-page-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 4px 0 20px;
+}
+.sh-page-head .eyebrow {
+  font-size: 11.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.sh-page-head h1 {
+  font-size: 24px;
+  margin: 0;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.sh-page-head p {
+  margin: 4px 0 0;
+  color: var(--text-faint);
+  font-size: 13px;
+}
+
+/* ---------- stat cards ---------- */
+.sh-stat .ant-card {
+  position: relative;
+  overflow: hidden;
+}
+.sh-stat .ant-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(#6ea8fe, #c0a4ff);
+  opacity: 0.85;
+}
+.sh-stat .ant-statistic-content-value {
+  background: linear-gradient(120deg, var(--stat-a), var(--stat-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.sh-stat.plain .ant-statistic-content-value {
+  background: none;
+  -webkit-text-fill-color: inherit;
+  color: var(--text);
+}
+
+/* ---------- cards ---------- */
+.ant-card {
+  box-shadow: var(--shadow);
+}
+.ant-card-bordered,
+.ant-card.ant-card-bordered {
+  border-color: var(--border);
+}
+
+/* ---------- terminal ---------- */
+.sh-terminal {
+  height: 460px;
+  background: #05070c;
+  border: 1px solid #1e2733;
+  border-radius: 12px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.sh-batchbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 14px;
+  margin-bottom: 10px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-soft);
+  border-radius: 10px;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.sh-mono {
+  font-family: "SFMono-Regular", Consolas, Menlo, monospace;
+  font-size: 12.5px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.sh-out {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 10px;
+  padding: 12px;
+  max-height: 420px;
+  overflow: auto;
+  color: var(--code-fg);
+}

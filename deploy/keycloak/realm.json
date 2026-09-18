@@ -1,0 +1,96 @@
+{
+  "realm": "sandboxhub",
+  "enabled": true,
+  "displayName": "SandboxHub",
+  "sslRequired": "none",
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "accessTokenLifespan": 1800,
+  "ssoSessionIdleTimeout": 28800,
+  "ssoSessionMaxLifespan": 86400,
+  "roles": {
+    "realm": [
+      { "name": "platform-admin", "description": "平台管理员：全部权限" },
+      { "name": "tenant-admin", "description": "租户管理员：本租户成员/配额/Key" },
+      { "name": "developer", "description": "开发者：自助使用沙箱" },
+      { "name": "viewer", "description": "只读/审计" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "sandboxhub-web",
+      "name": "SandboxHub Web",
+      "protocol": "openid-connect",
+      "publicClient": true,
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "redirectUris": [
+        "http://localhost:8081/*",
+        "http://127.0.0.1:8081/*",
+        "http://43.135.120.107:8081/*"
+      ],
+      "webOrigins": [
+        "http://localhost:8081",
+        "http://127.0.0.1:8081",
+        "http://43.135.120.107:8081"
+      ],
+      "attributes": {
+        "pkce.code.challenge.method": "S256",
+        "post.logout.redirect.uris": "http://localhost:8081/*##http://43.135.120.107:8081/*"
+      }
+    },
+    {
+      "clientId": "sandboxhub-bff",
+      "name": "SandboxHub BFF",
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "secret": "sh_bff_secret_2026",
+      "serviceAccountsEnabled": true,
+      "standardFlowEnabled": false,
+      "directAccessGrantsEnabled": false
+    }
+  ],
+  "users": [
+    {
+      "username": "admin",
+      "enabled": true,
+      "email": "admin@sandboxhub.local",
+      "emailVerified": true,
+      "firstName": "Platform",
+      "lastName": "Admin",
+      "credentials": [{ "type": "password", "value": "Passw0rd!", "temporary": false }],
+      "realmRoles": ["platform-admin"]
+    },
+    {
+      "username": "tenantadmin",
+      "enabled": true,
+      "email": "tenantadmin@sandboxhub.local",
+      "emailVerified": true,
+      "firstName": "Tenant",
+      "lastName": "Admin",
+      "credentials": [{ "type": "password", "value": "Passw0rd!", "temporary": false }],
+      "realmRoles": ["tenant-admin"]
+    },
+    {
+      "username": "dev1",
+      "enabled": true,
+      "email": "dev1@sandboxhub.local",
+      "emailVerified": true,
+      "firstName": "Dev",
+      "lastName": "One",
+      "credentials": [{ "type": "password", "value": "Passw0rd!", "temporary": false }],
+      "realmRoles": ["developer"]
+    },
+    {
+      "username": "viewer",
+      "enabled": true,
+      "email": "viewer@sandboxhub.local",
+      "emailVerified": true,
+      "firstName": "Read",
+      "lastName": "Only",
+      "credentials": [{ "type": "password", "value": "Passw0rd!", "temporary": false }],
+      "realmRoles": ["viewer"]
+    }
+  ]
+}

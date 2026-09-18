@@ -1,0 +1,28 @@
+# secrets
+.env
+*.pem
+*.key
+secrets/
+
+# node
+node_modules/
+dist/
+.vite/
+coverage/
+*.log
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# generated
+packages/api-client/src/generated/
+
+# os
+.DS_Store
+Thumbs.db

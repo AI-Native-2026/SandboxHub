@@ -1,0 +1,16 @@
+[project]
+name = "sandboxhub-cli"
+version = "0.1.0"
+description = "SandboxHub command-line interface"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+sandboxhub = "sandboxhub_cli.main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["sandboxhub_cli*"]
